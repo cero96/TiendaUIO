@@ -1,0 +1,27 @@
+¨{%extends 'base.html'%}
+
+{%block title%} Create product{%endblock%}
+
+{%block content%}
+<div class="container mt-5">
+    <h2>Create New Product</h2>
+    <form method="POST" action='/create_product' class="mt-4">
+        <!-- Product Title -->
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" id="title" name="title" required>
+        </div>
+        <!-- Product Description -->
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+        </div>
+        <!-- Product Price -->
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" class="form-control" id="price" name="price" step="0.01" min="0" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{%endblock%}
